@@ -1,0 +1,69 @@
+// Italiano Inclusivo 3.0.0 - Custom
+// Copyright (c) 2024 Dario de Judicibus
+// SPDX-License-Identifier: MIT
+// Licenza MIT: vedi il file LICENSE
+// https://github.com/dejudicibus/itinc300
+// Conversione XKB del layout Windows xITAInc3.klc
+// Livelli: 1 = normale, 2 = Maiusc, 3 = AltGr, 4 = AltGr+Maiusc
+
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+    include "it(basic)"
+    name[Group1] = "Italian (Inclusivo 3.0)";
+
+    key <AE01> { type= "FOUR_LEVEL", [ 1, exclam, exclamdown, onesuperior ] };
+    key <AE02> { type= "FOUR_LEVEL", [ 2, quotedbl, U2020, twosuperior ] };
+    key <AE03> { type= "FOUR_LEVEL", [ 3, sterling, U2021, threesuperior ] };
+    key <AE04> { type= "FOUR_LEVEL", [ 4, dollar, U203B, onequarter ] };
+    key <AE05> { type= "FOUR_LEVEL", [ 5, percent, U2030, onehalf ] };
+    key <AE06> { type= "FOUR_LEVEL", [ 6, ampersand, U2180, threequarters ] };
+    key <AE07> { type= "FOUR_LEVEL", [ 7, slash, U2109, dead_stroke ] };
+    key <AE08> { type= "FOUR_LEVEL", [ 8, parenleft, U2103, dead_acute ] };
+    key <AE09> { type= "FOUR_LEVEL", [ 9, parenright, U2105, dead_grave ] };
+    key <AE10> { type= "FOUR_LEVEL", [ 0, equal, U221A, NoSymbol ] };
+    key <AE11> { type= "FOUR_LEVEL", [ apostrophe, question, questiondown, U2183 ] };
+    key <AE12> { type= "FOUR_LEVEL", [ igrave, asciicircum, notsign, dead_circumflex ] };
+
+    key <AD01> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ q, Q, U221E, U221D ] };
+    key <AD02> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ w, W, U2740, U271F ] };
+    key <AD03> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ e, E, EuroSign, U220A ] };
+    key <AD04> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ r, R, registered, U2022 ] };
+    // Su Windows AltGr+T produce la legatura "ƈt"; XKB emette un solo carattere per tasto
+    key <AD05> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ t, T, U0188, cent ] };
+    key <AD06> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ y, Y, yen, U25AA ] };
+    key <AD07> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ u, U, U0437, U018E ] };
+    key <AD08> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ i, I, U01DD, U018F ] };
+    key <AD09> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ o, O, U0153, U0152 ] };
+    key <AD10> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ p, P, thorn, THORN ] };
+    key <AD11> { type= "FOUR_LEVEL", [ egrave, eacute, bracketleft, braceleft ] };
+    key <AD12> { type= "FOUR_LEVEL", [ plus, asterisk, bracketright, braceright ] };
+
+    key <AC01> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ a, A, ae, AE ] };
+    key <AC02> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ s, S, U017F, U0283 ] };
+    key <AC03> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ d, D, eth, ETH ] };
+    key <AC04> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ f, F, U0192, U2261 ] };
+    key <AC05> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ g, G, U2206, U2207 ] };
+    key <AC06> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ h, H, U210E, U210F ] };
+    key <AC07> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ j, J, U0284, UA74F ] };
+    key <AC08> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ k, K, U201C, U2264 ] };
+    key <AC09> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ l, L, U201D, U2265 ] };
+    key <AC10> { type= "FOUR_LEVEL", [ ograve, ccedilla, at, Ccedilla ] };
+    key <AC11> { type= "FOUR_LEVEL", [ agrave, degree, numbersign, dead_abovering ] };
+    key <TLDE> { type= "FOUR_LEVEL", [ backslash, bar, grave, brokenbar ] };
+    key <BKSL> { type= "FOUR_LEVEL", [ ugrave, section, asciitilde, dead_tilde ] };
+
+    key <LSGT> { type= "FOUR_LEVEL", [ less, greater, guillemetleft, guillemetright ] };
+    key <AB01> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ z, Z, plusminus, U2213 ] };
+    key <AB02> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ x, X, multiply, U1D13 ] };
+    key <AB03> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ c, C, copyright, trademark ] };
+    key <AB04> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ v, V, U2228, U2227 ] };
+    key <AB05> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ b, B, ssharp, U2C6D ] };
+    key <AB06> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ n, N, ntilde, Ntilde ] };
+    key <AB07> { type= "FOUR_LEVEL_SEMIALPHABETIC", [ m, M, mu, mu ] };
+    key <AB08> { type= "FOUR_LEVEL", [ comma, semicolon, U2053, dead_cedilla ] };
+    key <AB09> { type= "FOUR_LEVEL", [ period, colon, division, dead_diaeresis ] };
+    key <AB10> { type= "FOUR_LEVEL", [ minus, underscore, backslash, emdash ] };
+
+    include "kpdl(dot)"
+    include "level3(ralt_switch)"
+};
